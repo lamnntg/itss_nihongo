@@ -5,8 +5,9 @@ function useUser(arrList) {
 
   const handleClick = (input) => {
     let dataUser = [].concat(arrData)
-    if (dataUser.findIndex(value => value === input) !== -1){
-      dataUser.splice(dataUser.findIndex(value => value === input), 1)
+    const index = dataUser.indexOf(input);
+    if (index > -1) {
+      dataUser.splice(index, 1);
     }
     setArrData(dataUser)
   }
